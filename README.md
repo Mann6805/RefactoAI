@@ -1,31 +1,36 @@
-# UnsupervisedTokenizer
+# AI-Assisted Code Review Tool for Detecting Anti-Patterns  
 
-Inspired by NLTK, this project explores a different way to split text into tokens — using unsupervised learning instead of rule-based logic.
+## 📌 Problem Statement  
+Modern software development heavily relies on **code review** to ensure maintainability, readability, and correctness.  
+However, traditional review processes are:  
+- **Time-consuming** – requiring manual effort from developers.  
+- **Error-prone** – reviewers may miss subtle issues due to workload or complexity.  
+- **Limited by static rules** – existing tools like SonarQube or Pylint mainly rely on predefined rules and often fail to capture deeper **semantic issues** in code.  
 
-## Why This?
+A critical aspect of poor code quality is the presence of **anti-patterns** – common but harmful coding practices that lead to maintainability issues, performance degradation, or security risks.  
+Examples include:  
+- Resource leaks  
+- Null pointer dereferences  
+- Concurrency issues  
+- Security vulnerabilities  
+- Excessive code complexity  
 
-Most tokenizers work well when the text is clean and predictable. But in the real world, text can be messy, inconsistent, and full of edge cases — from abbreviations like "Dr." to punctuation that changes meaning based on context.
+Detecting such issues **early and automatically** is essential to reduce technical debt and improve long-term software sustainability.  
 
-The idea here is to see if a system can learn where token boundaries are by spotting patterns in how text behaves, without relying on predefined grammar or regular expressions.
+## 🎯 Objective  
+The goal of this project is to build an **AI-assisted code review tool** that can:  
+1. **Detect code anti-patterns** in Python, Java, and C++.  
+2. Leverage **advanced transformer-based models** (e.g., CodeBERT, GraphCodeBERT, UniXcoder) to understand both the syntax and semantics of code.  
+3. Provide **intelligent review feedback** using Natural Language Generation (NLG), going beyond static warnings.  
+4. Offer a **secure, private deployment environment** for integration with development workflows.  
 
-## What It's Trying to Do
+## 📚 Motivation  
+- Existing **rule-based static analyzers** are limited in their ability to capture complex patterns.  
+- Advances in **code representation learning** show promise in improving defect detection and automated feedback.  
+- AI-assisted reviews can **augment human reviewers**, reducing their workload while improving accuracy.  
+- By focusing on a set of impactful issues first, we can validate effectiveness before extending to broader code quality checks.  
 
-- Analyze how characters and words appear in natural language
-- Detect patterns or shifts that might suggest where one token ends and another begins
-- Build a tokenizer that learns from the data itself, rather than relying on fixed rules
-
-## What's Planned
-
-Here’s the plan:
-- Gather and clean real-world text data
-- Explore how token boundaries can be inferred statistically or structurally
-- Use anomaly detection or sequence modeling to predict likely breakpoints
-- Compare the result to standard tokenizers like NLTK
-
-## Where Things Stand
-
-The core idea is defined and early experimentation is in progress. The focus now is on identifying the signals that help distinguish true boundaries — without external labels or handcrafted logic.
-
-## The Bigger Picture
-
-This project is part of a broader effort to make NLP tools more flexible and adaptive. The goal is to reduce reliance on fixed rules and instead create systems that learn from data — even when the data is messy or unpredictable.
+## ✅ Expected Outcomes  
+- A working prototype that can analyze code and detect selected anti-patterns.  
+- Integration of AI models with a **review feedback system**.  
+- Deployment-ready solution running on a **private Linux-based server infrastructure** for flexibility and security.  
