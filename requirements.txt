@@ -1,0 +1,10 @@
+transformers==4.41.2
+datasets
+torch
+tree-sitter
+tree-sitter-c
+peft
+scikit-learn
+tqdm
+pandas
+numpy
